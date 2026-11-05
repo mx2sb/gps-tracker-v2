@@ -1,0 +1,25 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+CE72EA1DCC58C903900FD5A8 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core.swift"; sourceTree = "<group>"; };
+14C7688237F75539EA61AC53 = { isa = PBXBuildFile; fileRef = CE72EA1DCC58C903900FD5A8; };
+60302E3A0E3D8127C4454130 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recorder.swift"; sourceTree = "<group>"; };
+F5CDD098D95605670B57783D = { isa = PBXBuildFile; fileRef = 60302E3A0E3D8127C4454130; };
+9D140EA2AD44B4C1E9FF9D81 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilesApp.swift"; sourceTree = "<group>"; };
+7230054E4ECDA7900D715B44 = { isa = PBXBuildFile; fileRef = 9D140EA2AD44B4C1E9FF9D81; };
+9AC3B5AD93CBC0305C62F78F = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+A8792157CB4F27FB949C035F = { isa = PBXFileReference; explicitFileType = wrapper.application; path = Miles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+878A52FC5FF6A57D50B7B870 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (14C7688237F75539EA61AC53,F5CDD098D95605670B57783D,7230054E4ECDA7900D715B44,); runOnlyForDeploymentPostprocessing = 0; };
+41D311A605520FC7B8B9A980 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+E2AA269EB967A8853A258BFA = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+AD936FCBED631FA67E05C3EA = { isa = PBXGroup; children = (FC233BDA2344D97687F5A251,0A3E27B8CA818264D75C8D81,); sourceTree = "<group>"; };
+FC233BDA2344D97687F5A251 = { isa = PBXGroup; children = (CE72EA1DCC58C903900FD5A8,60302E3A0E3D8127C4454130,9D140EA2AD44B4C1E9FF9D81,9AC3B5AD93CBC0305C62F78F,); path = Miles; sourceTree = "<group>"; };
+0A3E27B8CA818264D75C8D81 = { isa = PBXGroup; children = (A8792157CB4F27FB949C035F,); name = Products; sourceTree = "<group>"; };
+488864B3D19480A82F7F1786 = { isa = XCBuildConfiguration; name = Debug; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 16.0; CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; }; };
+952548237D7F645F11D1E7B6 = { isa = XCBuildConfiguration; name = Debug; buildSettings = { CODE_SIGN_STYLE = "Automatic"; DEVELOPMENT_TEAM = ""; PRODUCT_BUNDLE_IDENTIFIER = "local.miles.gps.trial"; PRODUCT_NAME = "Miles"; INFOPLIST_FILE = "Miles/Info.plist"; GENERATE_INFOPLIST_FILE = "NO"; TARGETED_DEVICE_FAMILY = "1"; SWIFT_VERSION = "5.0"; SWIFT_STRICT_CONCURRENCY = "minimal"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = "NO"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; ENABLE_USER_SCRIPT_SANDBOXING = "YES"; }; };
+35B1014F135DE9B45529B733 = { isa = XCBuildConfiguration; name = Release; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 16.0; CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; }; };
+E2D3A31BEAA1368FC62DA77A = { isa = XCBuildConfiguration; name = Release; buildSettings = { CODE_SIGN_STYLE = "Automatic"; DEVELOPMENT_TEAM = ""; PRODUCT_BUNDLE_IDENTIFIER = "local.miles.gps.trial"; PRODUCT_NAME = "Miles"; INFOPLIST_FILE = "Miles/Info.plist"; GENERATE_INFOPLIST_FILE = "NO"; TARGETED_DEVICE_FAMILY = "1"; SWIFT_VERSION = "5.0"; SWIFT_STRICT_CONCURRENCY = "minimal"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = "NO"; SWIFT_OPTIMIZATION_LEVEL = "-O"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; ENABLE_USER_SCRIPT_SANDBOXING = "YES"; }; };
+B4E10CAA9C5E22150B71559C = { isa = XCConfigurationList; buildConfigurations = (488864B3D19480A82F7F1786,35B1014F135DE9B45529B733,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+4A807E8A027297B0B93701FB = { isa = XCConfigurationList; buildConfigurations = (952548237D7F645F11D1E7B6,E2D3A31BEAA1368FC62DA77A,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+34A04005BCAF206EEC990BD9 = { isa = PBXNativeTarget; buildConfigurationList = 4A807E8A027297B0B93701FB; buildPhases = (878A52FC5FF6A57D50B7B870,E2AA269EB967A8853A258BFA,41D311A605520FC7B8B9A980,); buildRules = (); dependencies = (); name = Miles; productName = Miles; productReference = A8792157CB4F27FB949C035F; productType = "com.apple.product-type.application"; };
+244210E48437B6556980A702 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; TargetAttributes = { 34A04005BCAF206EEC990BD9 = { CreatedOnToolsVersion = 16.0; SystemCapabilities = { com.apple.BackgroundModes = { enabled = 1; }; }; }; }; }; buildConfigurationList = B4E10CAA9C5E22150B71559C; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es,en,Base,); mainGroup = AD936FCBED631FA67E05C3EA; productRefGroup = 0A3E27B8CA818264D75C8D81; projectDirPath = ""; projectRoot = ""; targets = (34A04005BCAF206EEC990BD9,); };
+}; rootObject = 244210E48437B6556980A702; }
