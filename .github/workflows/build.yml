@@ -1,0 +1,48 @@
+
+name: Build Miles iOS 0.1.2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Verificar Xcode
+        run: xcodebuild -version
+
+      - name: Compilar Miles para iPhone
+        working-directory: Miles-iPhone
+        run: |
+          xcodebuild \
+            -project Miles.xcodeproj \
+            -scheme Miles \
+            -configuration Debug \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/MilesBuild" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Generar Miles IPA
+        run: |
+          APP="$RUNNER_TEMP/MilesBuild/Build/Products/Debug-iphoneos/Miles.app"
+          test -d "$APP"
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          ditto "$APP" "$RUNNER_TEMP/ipa/Payload/Miles.app"
+          cd "$RUNNER_TEMP/ipa"
+          ditto -c -k --sequesterRsrc --keepParent Payload \
+            "$GITHUB_WORKSPACE/Miles.ipa"
+          unzip -t "$GITHUB_WORKSPACE/Miles.ipa"
+
+      - name: Publicar IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Miles-0.1.2-IPA
+          path: Miles.ipa
+          if-no-files-found: error
+          retention-days: 30
